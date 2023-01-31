@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+class Movie {
+    private let title: String
+    
+    init(title: String) {
+        self.title = title
+    }
+    
+    func addScreening(screening: MovieScreening) {
+        
+    }
+    
+    func toString() -> String {
+        return ""
+    }
+}

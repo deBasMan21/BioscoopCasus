@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum TicketExportFormat {
+    case PLAINTEXT
+    case JSON
+}

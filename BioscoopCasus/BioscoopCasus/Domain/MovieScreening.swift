@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+class MovieScreening {
+    private let dateAndTime: Date
+    private let pricePerSeat: Double
+    
+    init(dateAndTime: Date, pricePerSeat: Double) {
+        self.dateAndTime = dateAndTime
+        self.pricePerSeat = pricePerSeat
+    }
+    
+    func getPricePerSeat() -> Double {
+        pricePerSeat
+    }
+    
+    func toString() -> String {
+        return ""
+    }
+}
