@@ -13,14 +13,14 @@ class Order: Encodable, CustomStringConvertible {
     private var tickets: [MovieTicket]
     private let isStudentOrder: Bool
     
+    var description: String {
+        "Order Number: \(orderNr)\nIs student order: \(isStudentOrder)\nTickets: \(tickets.count)"
+    }
+    
     init(orderNr: Int, isStudentOrder: Bool) {
         self.orderNr = orderNr
         self.isStudentOrder = isStudentOrder
         self.tickets = []
-    }
-    
-    var description: String {
-        return "Order Number: \(orderNr)\nIs student order: \(isStudentOrder)\nTickets: \(tickets.count)"
     }
     
     func getOrderNr() -> Int {
@@ -93,5 +93,3 @@ class Order: Encodable, CustomStringConvertible {
         }
     }
 }
-
-
