@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MovieTicket {
+class MovieTicket: Encodable {
     private let movieScreening: MovieScreening
     private let rowNr: Int
     private let seatNr: Int

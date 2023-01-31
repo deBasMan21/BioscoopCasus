@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MovieScreening {
+class MovieScreening: Encodable {
     private let dateAndTime: Date
     private let pricePerSeat: Double
     
