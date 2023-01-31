@@ -56,36 +56,9 @@ class Order: Encodable, CustomStringConvertible {
     func export(exportFormat: TicketExportFormat) {
         switch exportFormat {
         case TicketExportFormat.JSON:
-            exportJSON()
+            FileUtils.exportJSON(self)
         case TicketExportFormat.PLAINTEXT:
-            exportPlainText()
-        }
-    }
-    
-    private func exportJSON() {
-        do {
-            let encoder = JSONEncoder()
-            encoder.outputFormatting = .prettyPrinted
-            let data = try encoder.encode(self)
-            
-            if let json = String(data: data, encoding: .utf8) {
-                let path = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop")
-                let pathFile = path.appendingPathComponent("Order.json")
-                try json.write(to: pathFile, atomically: true, encoding: .utf8)
-            }
-        } catch let error {
-            print(error)
-        }
-    }
-    
-    private func exportPlainText() {
-        do {
-            let stringValue = String(describing: self)
-            let path = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop")
-            let pathFile = path.appendingPathComponent("Order.txt")
-            try stringValue.write(to: pathFile, atomically: true, encoding: .utf8)
-        } catch let error {
-            print(error)
+            FileUtils.exportPlainText(self)
         }
     }
 }
