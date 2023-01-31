@@ -1,0 +1,26 @@
+name: Run tests
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+    inputs:
+      checkout_branch:
+        description: "Test from branch"
+        required: true
+        default: "develop"
+
+jobs:
+  build:
+    name: Build and test project
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.checkout_branch }}
+
+      - name: Build and test
+        run: |
+          xcodebuild test -project BioscoopCasus/BioscoopCasus.xcodeproj -scheme BioscoopCasus
