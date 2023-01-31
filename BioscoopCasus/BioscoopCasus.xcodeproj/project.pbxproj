@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		EFEFF1142988FCA40085500D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFF1132988FCA40085500D /* main.swift */; };
+		EFEFF11C2988FEB90085500D /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFF11B2988FEB90085500D /* Order.swift */; };
+		EFEFF11E2988FEC70085500D /* TicketExportFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFF11D2988FEC70085500D /* TicketExportFormat.swift */; };
+		EFEFF1202988FED00085500D /* MovieTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFF11F2988FED00085500D /* MovieTicket.swift */; };
+		EFEFF1222988FED90085500D /* MovieScreening.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFF1212988FED90085500D /* MovieScreening.swift */; };
+		EFEFF1242988FEE30085500D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFF1232988FEE30085500D /* Movie.swift */; };
+		EFEFF127298956F20085500D /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = EFEFF126298956F20085500D /* Algorithms */; };
+		EFEFF12A298958C90085500D /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFF129298958C90085500D /* DateExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,12 @@
 /* Begin PBXFileReference section */
 		EFEFF1102988FCA40085500D /* BioscoopCasus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BioscoopCasus; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEFF1132988FCA40085500D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EFEFF11B2988FEB90085500D /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		EFEFF11D2988FEC70085500D /* TicketExportFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketExportFormat.swift; sourceTree = "<group>"; };
+		EFEFF11F2988FED00085500D /* MovieTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTicket.swift; sourceTree = "<group>"; };
+		EFEFF1212988FED90085500D /* MovieScreening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieScreening.swift; sourceTree = "<group>"; };
+		EFEFF1232988FEE30085500D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		EFEFF129298958C90085500D /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEFF127298956F20085500D /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +71,31 @@
 		EFEFF1122988FCA40085500D /* BioscoopCasus */ = {
 			isa = PBXGroup;
 			children = (
+				EFEFF128298958B90085500D /* Extensions */,
+				EFEFF11A2988FE9E0085500D /* Domain */,
 				EFEFF1132988FCA40085500D /* main.swift */,
 			);
 			path = BioscoopCasus;
+			sourceTree = "<group>";
+		};
+		EFEFF11A2988FE9E0085500D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFF11B2988FEB90085500D /* Order.swift */,
+				EFEFF11D2988FEC70085500D /* TicketExportFormat.swift */,
+				EFEFF11F2988FED00085500D /* MovieTicket.swift */,
+				EFEFF1212988FED90085500D /* MovieScreening.swift */,
+				EFEFF1232988FEE30085500D /* Movie.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EFEFF128298958B90085500D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFF129298958C90085500D /* DateExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +114,9 @@
 			dependencies = (
 			);
 			name = BioscoopCasus;
+			packageProductDependencies = (
+				EFEFF126298956F20085500D /* Algorithms */,
+			);
 			productName = BioscoopCasus;
 			productReference = EFEFF1102988FCA40085500D /* BioscoopCasus */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +145,9 @@
 				Base,
 			);
 			mainGroup = EFEFF1072988FCA40085500D;
+			packageReferences = (
+				EFEFF125298956F20085500D /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = EFEFF1112988FCA40085500D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,7 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEFF12A298958C90085500D /* DateExtensions.swift in Sources */,
+				EFEFF1202988FED00085500D /* MovieTicket.swift in Sources */,
+				EFEFF11C2988FEB90085500D /* Order.swift in Sources */,
+				EFEFF1242988FEE30085500D /* Movie.swift in Sources */,
+				EFEFF11E2988FEC70085500D /* TicketExportFormat.swift in Sources */,
 				EFEFF1142988FCA40085500D /* main.swift in Sources */,
+				EFEFF1222988FED90085500D /* MovieScreening.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +332,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EFEFF125298956F20085500D /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EFEFF126298956F20085500D /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFEFF125298956F20085500D /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFEFF1082988FCA40085500D /* Project object */;
 }
