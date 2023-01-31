@@ -8,11 +8,13 @@
 import Foundation
 
 class MovieTicket {
+    private let movieScreening: MovieScreening
     private let rowNr: Int
     private let seatNr: Int
     private let isPremium: Bool
     
-    init(rowNr: Int, seatNr: Int, isPremium: Bool) {
+    init(movieScreening: MovieScreening, rowNr: Int, seatNr: Int, isPremium: Bool) {
+        self.movieScreening = movieScreening
         self.rowNr = rowNr
         self.seatNr = seatNr
         self.isPremium = isPremium

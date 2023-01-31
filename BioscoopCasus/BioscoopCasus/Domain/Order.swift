@@ -10,10 +10,12 @@ import Foundation
 class Order {
     private let orderNr: Int
     private let isStudentOrder: Bool
+    private var tickets: [MovieTicket]
     
     init(orderNr: Int, isStudentOrder: Bool) {
         self.orderNr = orderNr
         self.isStudentOrder = isStudentOrder
+        self.tickets = []
     }
     
     func getOrderNr() -> Int {
@@ -21,7 +23,7 @@ class Order {
     }
     
     func addSeatReservation(ticket: MovieTicket) {
-        print("ticket \(ticket)")
+        tickets += [ticket]
     }
     
     func calculatePrice() -> Double {
