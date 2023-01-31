@@ -25,7 +25,11 @@ class MovieTicket {
     }
     
     func getPrice() -> Double {
-        return 0
+        movieScreening.getPricePerSeat()
+    }
+    
+    func getDateAndTime() -> Date {
+        movieScreening.getDateAndTime()
     }
     
     func toString() -> String {

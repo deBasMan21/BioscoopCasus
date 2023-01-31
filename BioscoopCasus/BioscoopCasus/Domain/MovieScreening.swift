@@ -20,6 +20,10 @@ class MovieScreening {
         pricePerSeat
     }
     
+    func getDateAndTime() -> Date {
+        return dateAndTime
+    }
+    
     func toString() -> String {
         return ""
     }
