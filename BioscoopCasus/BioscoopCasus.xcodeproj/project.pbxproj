@@ -15,6 +15,7 @@
 		EFEFF1242988FEE30085500D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFF1232988FEE30085500D /* Movie.swift */; };
 		EFEFF127298956F20085500D /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = EFEFF126298956F20085500D /* Algorithms */; };
 		EFEFF12A298958C90085500D /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFF129298958C90085500D /* DateExtensions.swift */; };
+		EFEFF1542989613D0085500D /* BioscoopCasusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFF1532989613D0085500D /* BioscoopCasusTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,8 @@
 		EFEFF1212988FED90085500D /* MovieScreening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieScreening.swift; sourceTree = "<group>"; };
 		EFEFF1232988FEE30085500D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		EFEFF129298958C90085500D /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		EFEFF1512989613D0085500D /* BioscoopCasusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BioscoopCasusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFEFF1532989613D0085500D /* BioscoopCasusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioscoopCasusTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +52,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFEFF14E2989613D0085500D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -56,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				EFEFF1122988FCA40085500D /* BioscoopCasus */,
+				EFEFF1522989613D0085500D /* BioscoopCasusTests */,
 				EFEFF1112988FCA40085500D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				EFEFF1102988FCA40085500D /* BioscoopCasus */,
+				EFEFF1512989613D0085500D /* BioscoopCasusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +110,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		EFEFF1522989613D0085500D /* BioscoopCasusTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFF1532989613D0085500D /* BioscoopCasusTests.swift */,
+			);
+			path = BioscoopCasusTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +141,23 @@
 			productReference = EFEFF1102988FCA40085500D /* BioscoopCasus */;
 			productType = "com.apple.product-type.tool";
 		};
+		EFEFF1502989613D0085500D /* BioscoopCasusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFEFF1572989613D0085500D /* Build configuration list for PBXNativeTarget "BioscoopCasusTests" */;
+			buildPhases = (
+				EFEFF14D2989613D0085500D /* Sources */,
+				EFEFF14E2989613D0085500D /* Frameworks */,
+				EFEFF14F2989613D0085500D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BioscoopCasusTests;
+			productName = BioscoopCasusTests;
+			productReference = EFEFF1512989613D0085500D /* BioscoopCasusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -132,6 +169,9 @@
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					EFEFF10F2988FCA40085500D = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					EFEFF1502989613D0085500D = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
@@ -153,9 +193,20 @@
 			projectRoot = "";
 			targets = (
 				EFEFF10F2988FCA40085500D /* BioscoopCasus */,
+				EFEFF1502989613D0085500D /* BioscoopCasusTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFEFF14F2989613D0085500D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EFEFF10C2988FCA40085500D /* Sources */ = {
@@ -169,6 +220,14 @@
 				EFEFF11E2988FEC70085500D /* TicketExportFormat.swift in Sources */,
 				EFEFF1142988FCA40085500D /* main.swift in Sources */,
 				EFEFF1222988FED90085500D /* MovieScreening.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFEFF14D2989613D0085500D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFEFF1542989613D0085500D /* BioscoopCasusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +369,36 @@
 			};
 			name = Release;
 		};
+		EFEFF1552989613D0085500D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 963LK66N4P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.Buijsen.BioscoopCasusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EFEFF1562989613D0085500D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 963LK66N4P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.Buijsen.BioscoopCasusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +416,15 @@
 			buildConfigurations = (
 				EFEFF1182988FCA40085500D /* Debug */,
 				EFEFF1192988FCA40085500D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFEFF1572989613D0085500D /* Build configuration list for PBXNativeTarget "BioscoopCasusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFEFF1552989613D0085500D /* Debug */,
+				EFEFF1562989613D0085500D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
