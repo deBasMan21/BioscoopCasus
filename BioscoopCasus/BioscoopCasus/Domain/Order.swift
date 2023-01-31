@@ -8,7 +8,7 @@
 import Foundation
 import Algorithms
 
-class Order: Encodable {
+class Order: Encodable, CustomStringConvertible {
     private let orderNr: Int
     private var tickets: [MovieTicket]
     private let isStudentOrder: Bool
@@ -17,6 +17,10 @@ class Order: Encodable {
         self.orderNr = orderNr
         self.isStudentOrder = isStudentOrder
         self.tickets = []
+    }
+    
+    var description: String {
+        return "Order Number: \(orderNr)\nIs student order: \(isStudentOrder)\nTickets: \(tickets.count)"
     }
     
     func getOrderNr() -> Int {
@@ -58,7 +62,7 @@ class Order: Encodable {
         case TicketExportFormat.JSON:
             exportJSON()
         case TicketExportFormat.PLAINTEXT:
-            print("todo")
+            exportPlainText()
         }
     }
     
@@ -67,7 +71,6 @@ class Order: Encodable {
             let encoder = JSONEncoder()
             encoder.outputFormatting = .prettyPrinted
             let data = try encoder.encode(self)
-            let json = String(data: data, encoding: .utf8)
             
             if let json = String(data: data, encoding: .utf8) {
                 let path = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop")
@@ -77,7 +80,17 @@ class Order: Encodable {
         } catch let error {
             print(error)
         }
-
+    }
+    
+    private func exportPlainText() {
+        do {
+            let stringValue = String(describing: self)
+            let path = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop")
+            let pathFile = path.appendingPathComponent("Order.txt")
+            try stringValue.write(to: pathFile, atomically: true, encoding: .utf8)
+        } catch let error {
+            print(error)
+        }
     }
 }
 
